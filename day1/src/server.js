@@ -2,7 +2,7 @@
 import express from "express" // NEW IMPORT SYNTAX (remember to add type: "module" in package.json to use new syntax)
 import listEndpoints from "express-list-endpoints"
 
-import studentsRouter from "./services/students/index.js"
+import authorsRouter from "./services/authors/index.js"
 
 const server = express()
 
@@ -10,7 +10,7 @@ server.use(express.json()) // If I do NOT specify this line BEFORE the endpoints
 
 // ************************ ENDPOINTS **********************
 
-server.use("/students", studentsRouter) // all of the endpoints which are in the studentsRouter will have /students as a prefix
+server.use("/books", authorsRouter) // all of the endpoints which are in the authorsRouter will have /students as a prefix
 
 const port = 3001
 

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "name",
+    "surname": "dasdasda",
+    "email": "guillermo@fragachan",
+    "dateOfBirth": "24/06/1990",
+    "avatar": "url"
+  },
+  {
+    "name": "name",
+    "surname": "dasdasda",
+    "email": "guillermo@fragachan",
+    "dateOfBirth": "24/06/1990",
+    "avatar": "url",
+    "createdAt": "2021-10-19T13:42:53.848Z",
+    "id": "2ja5b818kuy4zfrt"
+  }
+]
