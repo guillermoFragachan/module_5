@@ -2,23 +2,14 @@
   "name": "homework",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -e js ./src/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
   "keywords": [],
-  "author": "Riccardo Gulin",
-  "license": "ISC",
-  "bugs": {
-    
-  },
-  "homepage": "",
+  "author": "",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
