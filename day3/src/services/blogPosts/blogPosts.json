@@ -1,18 +1,1 @@
-[
-    {	
-        "_id": "SERVER GENERATED ID",
-        "category": "ARTICLE CATEGORY",
-        "title": "ARTICLE TITLE",
-        "cover":"ARTICLE COVER (IMAGE LINK)",
-        "readTime": {
-            "value": 2,
-          "unit": "minute"
-         },
-        "author": {
-            "name": "AUTHOR AVATAR NAME",
-            "avatar":"AUTHOR AVATAR LINK"
-            },
-         "content":"HTML",
-         "createdAt": "NEW DATE"
-        }
-]
+[{"_id":"SERVER GENERATED ID","category":"ARTICLE CATEGORY","title":"ARTICLE TITLE","cover":"ARTICLE COVER (IMAGE LINK)","readTime":{"value":2,"unit":"minute"},"author":{"name":"AUTHOR AVATAR NAME","avatar":"AUTHOR AVATAR LINK"},"content":"HTML","createdAt":"NEW DATE"},{"_id":"SERVER GENERATED ID","category":"ARTICLE CATEGORY","title":"ARTICLE TITLE","cover":"ARTICLE COVER (IMAGE LINK)","readTime":{"value":2,"unit":"minute"},"author":{"name":"AUTHOR AVATAR NAME","avatar":"AUTHOR AVATAR LINK"},"content":"HTML","createdAt":"NEW DATE","id":"2ja5b5fkkuzm77b4"},{"category":"ARTICLE CATEGORY","title":"ARTICLE TITLE","cover":"ARTICLE COVER (IMAGE LINK)","readTime":{"value":2,"unit":"minute"},"author":{"name":"AUTHOR AVATAR NAME","avatar":"AUTHOR AVATAR LINK"},"content":"HTML","createdAt":"NEW DATE","id":"2ja5b5fkkuzm7dce"},{"category":"ARTICLE CATEGORY","title":"ARTICLE TITLE","cover":"ARTICLE COVER (IMAGE LINK)","readTime":{"value":2,"unit":"minute"},"author":{"name":"AUTHOR AVATAR NAME","avatar":"AUTHOR AVATAR LINK"},"content":"HTML","createdAt":"NEW DATE","id":"2ja5b5fkkuzm7fwa"},{"category":"ARTICLE CATEGORY","title":"ARTICLE TITLE","cover":"ARTICLE COVER (IMAGE LINK)","readTime":{"value":2,"unit":"minute"},"author":{"name":"AUTHOR AVATAR NAME","avatar":"https://cdn.fakercloud.com/avatars/davidsasda_128.jpg"},"content":"HTML","createdAt":"NEW DATE","id":"2ja5bafokuzm8tml"},{"category":"ARTICLE CATEGORY","title":"ARTICLE TITLE","cover":"http://placeimg.com/640/480/business","readTime":{"value":2,"unit":"minute"},"author":{"name":"AUTHOR AVATAR NAME","avatar":"https://cdn.fakercloud.com/avatars/nicolasfolliot_128.jpg"},"content":"HTML","createdAt":"NEW DATE","id":"2ja5bafokuzm96zp"}]
