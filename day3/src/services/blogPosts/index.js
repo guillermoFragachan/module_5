@@ -4,6 +4,8 @@ import { fileURLToPath } from "url" // CORE MODULE (doesn't need to be installed
 import { dirname, join } from "path" // CORE MODULE (doesn't need to be installed)
 import uniqid from "uniqid" // 3RD PARTY MODULE (does need to be installed)
 import createHttpError from "http-errors"
+import {uploadFile} from '../files/index.js'
+import multer from "multer"
 
 
 import expressValidator from "express-validator"
@@ -116,6 +118,44 @@ blogPostsRouter.put(
     } catch (error) {
       console.log(error);
       res.send(500).send({ message: error.message });
+    }
+  }
+);
+
+
+blogPostsRouter.post(
+  "/:id/image",
+  multer().single("blogPosts"),
+  uploadFile,
+  async (req, res, next) => {
+    try {
+      const fileAsBuffer = fs.readFileSync(blogPostsJSON);
+
+      const fileAsString = fileAsBuffer.toString();
+
+      let fileAsJSONArray = JSON.parse(fileAsString);
+
+      const index = fileAsJSONArray.findIndex(
+        (author) => author.id === req.params.id
+      );
+      console.log(index)
+      if (index === -1) {
+        res
+          .status(404)
+          .send({ message: `Author with ${req.params.id} is not found!` });
+      }
+      const prevDataBlog = fileAsJSONArray[index];
+      const newDataBlog = {
+        ...prevDataBlog,
+        cover: req.file,
+        updatedAt: new Date(),
+        id: req.params.id,
+      };
+      fileAsJSONArray[index] = newDataBlog;
+      fs.writeFileSync(blogPostsJSON, JSON.stringify(fileAsJSONArray));
+      res.send(newDataBlog);
+    } catch (error) {
+      res.send(500);
     }
   }
 );
