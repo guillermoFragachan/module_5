@@ -8,7 +8,7 @@ import { join } from "path"
 //import { genericErrorHandler, badRequestHandler, unauthorizedHandler, notFoundHandler } from "./errorHandlers.js"
 
 //routing
-import filesRouter from "./services/files/index.js"
+// import filesRouter from "./services/files/index.js"
 
 import authorsRouter from "./services/authors/index.js"
 import blogPostsRouter from './services/blogPosts/index.js'
@@ -37,7 +37,7 @@ server.use('/blogPosts', blogPostsRouter)
 
 server.use("/books", authorsRouter) 
 
-server.use("/files", filesRouter)
+// server.use("/files", filesRouter)
 
 
 const port = 3001
