@@ -69,11 +69,56 @@ blogPostsRouter.delete('/:postId', (req, res) =>{
 
 })
 
+
+
 blogPostsRouter.put('/:postId', (req, res) =>{
 
 
 
 })
+
+
+//comments
+
+blogPostsRouter.put(
+  "/:id/comment",
+  async (req, res, next) => {
+    try {
+      const { text, userName } = req.body;
+      const comment = { id: uniqid(), text, userName, createdAt: new Date() };
+      const fileAsBuffer = fs.readFileSync(blogPostsJSON);
+
+      const fileAsString = fileAsBuffer.toString();
+
+      let fileAsJSONArray = JSON.parse(fileAsString);
+
+      const blogIndex = fileAsJSONArray.findIndex(
+        (blog) => blog.id === req.params.id
+      );
+      if (!blogIndex == -1) {
+        res
+          .status(404)
+          .send({ message: `blog with ${req.params.id} is not found!` });
+      }
+      const previousblogData = fileAsJSONArray[blogIndex];
+      previousblogData.comments = previousblogData.comments || [];
+      const changedblog = {
+        ...previousblogData,
+        ...req.body,
+        comments: [...previousblogData.comments, comment],
+        updatedAt: new Date(),
+        id: req.params.id,
+      };
+      fileAsJSONArray[blogIndex] = changedblog;
+
+      fs.writeFileSync(blogPostsJSON, JSON.stringify(fileAsJSONArray));
+      res.send(changedblog);
+    } catch (error) {
+      console.log(error);
+      res.send(500).send({ message: error.message });
+    }
+  }
+);
 
 
 
